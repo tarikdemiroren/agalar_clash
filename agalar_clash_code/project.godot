@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Control",
+"class": "mainMenu",
+"language": "GDScript",
+"path": "res://src/user_interfaces/MainMenu.gd"
+} ]
+_global_script_class_icons={
+"mainMenu": ""
+}
+
 [application]
 
 config/name="Agalar_clash"

@@ -1,0 +1,75 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/user_interfaces/SettingsScene.gd" type="Script" id=1]
+
+[node name="SettingsScene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="GameSettings" type="VBoxContainer" parent="."]
+anchor_left = 0.6875
+anchor_top = 0.146667
+anchor_right = 0.9375
+anchor_bottom = 0.853333
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="gameplaylabel" type="Label" parent="GameSettings"]
+margin_right = 256.0
+margin_bottom = 14.0
+text = "Gameplay"
+align = 1
+
+[node name="VisualSettings" type="VBoxContainer" parent="."]
+anchor_left = 0.375
+anchor_top = 0.146667
+anchor_right = 0.625
+anchor_bottom = 0.853333
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="visuallabel" type="Label" parent="VisualSettings"]
+margin_right = 256.0
+margin_bottom = 14.0
+text = "Visuals"
+align = 1
+
+[node name="fullscreenbutton" type="CheckBox" parent="VisualSettings"]
+margin_top = 18.0
+margin_right = 256.0
+margin_bottom = 42.0
+text = "Toggle Fullscreen"
+
+[node name="AudioSettings" type="VBoxContainer" parent="."]
+anchor_left = 0.0625
+anchor_top = 0.146667
+anchor_right = 0.3125
+anchor_bottom = 0.853333
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="audiolabel" type="Label" parent="AudioSettings"]
+margin_right = 256.0
+margin_bottom = 14.0
+text = "Audio"
+align = 1
+
+[node name="returnbutton" type="Button" parent="."]
+anchor_left = 0.8125
+anchor_top = 0.88
+anchor_right = 0.957031
+anchor_bottom = 0.946667
+text = "Return To Main Menu"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[connection signal="pressed" from="VisualSettings/fullscreenbutton" to="." method="_on_fullscreenbutton_pressed"]
+[connection signal="pressed" from="returnbutton" to="." method="_on_returnbutton_pressed"]
